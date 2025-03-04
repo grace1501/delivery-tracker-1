@@ -13,4 +13,17 @@
 #
 class Delivery < ApplicationRecord
   belongs_to :user
+
+  # def self.received
+  #   Delivery.where({ :arrived => true })
+  # end
+
+  # def self.waiting_on
+  #   Delivery.where({ :arrived => false })
+  # end
+
+  def updated_minutes_ago
+    current_time = Time.now
+    ((current_time - self.updated_at)/60).to_i
+  end
 end
