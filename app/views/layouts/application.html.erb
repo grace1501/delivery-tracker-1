@@ -11,6 +11,18 @@
   </head>
 
   <body>
+    <nav>
+      <a href="/home">Delivery Tracker</a>
+
+      <% if current_user == nil %>
+        <a href="/users/sign_up">Sign up</a>
+        <a href="/users/sign_in">Sign in</a>
+      <% else %>
+        <a href="/users/sign_out">Sign out</a>
+        <a href="/users/edit">Edit profle</a>
+      <% end %>
+      
+    </nav>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root to: "home#index"
-  
+  root to: "deliveries#index"
+
   devise_for :users
   # Routes for the Delivery resource:
 
