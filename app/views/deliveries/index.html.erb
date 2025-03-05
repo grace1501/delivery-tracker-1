@@ -49,7 +49,7 @@
 
 <hr>
 
-<div class="waiting_on">
+<div class="waiting_on" style="background-color:lightyellow;">
   <h2>Waiting on</h2>
 
   <ul>
@@ -66,7 +66,6 @@
 
       <div>
         <form action="modify_delivery/<%= a_delivery.id %>" method="post">
-          <input type="hidden" name="query_arrived" value="true">
           <button>Mark as received</button>
         </form>
       </div>
@@ -79,7 +78,7 @@
 
 <hr>
 
-<div class="received">
+<div class="received" style="background-color:lightgreen;">
   <h2>Received</h2>
   <ul>
   <%  @list_of_deliveries.each do |a_delivery|   %>
